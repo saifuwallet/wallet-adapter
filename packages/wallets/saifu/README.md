@@ -2,6 +2,8 @@
 
 Wallet adapter for integrating Saifu Wallet
 
+![In Action](../../../saifu.png)
+
 Actual wallet adapter code is in https://github.com/saifuwallet/wallet-adapter/tree/master/packages/wallets/saifu
 
 ## Integrating saifu wallet-adapter

@@ -7,8 +7,8 @@ import {
     SlopeWalletAdapter,
     SolflareWalletAdapter,
     TorusWalletAdapter,
-    SaifuWalletAdapter,
 } from '@solana/wallet-adapter-wallets';
+import { SaifuWalletAdapter } from "@saifuwallet/wallet-adapter";
 import { clusterApiUrl } from '@solana/web3.js';
 import React, { FC, ReactNode, useMemo } from 'react';
 
@@ -19,6 +19,7 @@ export const App: FC = () => {
         </Context>
     );
 };
+
 
 const Context: FC<{ children: ReactNode }> = ({ children }) => {
     // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
@@ -32,12 +33,11 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
     // of wallets that your users connect to will be loaded.
     const wallets = useMemo(
         () => [
-            new PhantomWalletAdapter(),
             new GlowWalletAdapter(),
             new SlopeWalletAdapter(),
             new SolflareWalletAdapter({ network }),
             new TorusWalletAdapter(),
-            new SaifuWalletAdapter(),
+            new SaifuWalletAdapter()
         ],
         [network]
     );

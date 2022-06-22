@@ -29,6 +29,7 @@
         "nuke": "shx rm -rf node_modules yarn.lock"
     },
     "dependencies": {
+        "@saifuwallet/wallet-adapter": "^0.1.0",
         "@solana/wallet-adapter-base": "^0.9.4",
         "@solana/wallet-adapter-react": "^0.15.3",
         "@solana/wallet-adapter-react-ui": "^0.9.5",
